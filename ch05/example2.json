@@ -1,0 +1,17 @@
+{
+  "proto" : {
+    "id"    : "?band",
+    "name"  : "$rdfs:label$required",
+    "album" : "?album",
+    "genre" : {
+    	  "id"   : "$dbo:genre$required",
+	      "label": "$rdfs:label$required"
+    }
+  },
+  "$where": [
+        "?band a dbo:Band",
+        "?album a schema:MusicAlbum",
+        "?album dbo:artist ?band"
+  ],
+  "$limit": 100
+}

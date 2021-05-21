@@ -1,0 +1,22 @@
+#+ summary: Bands by city and genre
+#+ description:
+#+   This API endpoint lists bands from DBPedia that play either
+#+   Rock or Jazz, and that have either Liverpool or Los Angeles as hometown.
+#+ endpoint: http://dbpedia.org/sparql
+#+ endpoint_in_url: false
+#+ tags:
+#+   - dbpedia
+#+ method: GET
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX bif: <bif:>
+
+SELECT DISTINCT ?name ?genre ?hometown
+WHERE {
+?s a dbo:Band;
+  dbp:name ?name;
+  dbo:genre ?genre;
+  dbo:hometown ?hometown .
+  ?name bif:contains ?_bandname
+} LIMIT 100

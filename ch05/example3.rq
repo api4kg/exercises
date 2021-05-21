@@ -1,0 +1,23 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?work ?title
+(SAMPLE(?v2) AS ?v2) ?museum ?author ?v41 (COUNT(?v42) AS ?v42)
+WHERE {
+    VALUES ?museum {dbr:Louvre}
+
+    ?work a dbo:Work.
+    ?work rdfs:label ?title.
+    ?work foaf:depiction ?v2.
+    ?work dbo:museum ?museum.
+    OPTIONAL {
+        ?work dbo:author ?author .
+        ?author rdfs:label ?v41 .
+        FILTER(lang(?v41) = 'en').
+        ?v42 dbo:author ?author
+    }
+
+    FILTER(?author != dbr:Raphael)
+  }
+  ORDER BY desc(?title)
+  LIMIT 100

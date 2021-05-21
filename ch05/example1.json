@@ -1,0 +1,13 @@
+{
+  "proto": {
+    "id"    : "?band",
+    "album" : "?album",
+    "genre" : "$dbo:genre$required"
+  },
+  "$where" : [
+    "?band a dbo:Band",
+    "?album a schema:MusicAlbum",
+    "?album dbo:artist ?band"
+  ],
+  "$limit": 100
+}

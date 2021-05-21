@@ -1,0 +1,24 @@
+{
+  "proto" : {
+    "id"     : "?work",
+    "name"   : "$rdfs:label$required$var:title",
+    "image"  : "$foaf:depiction$sample",
+    "museum" : "$dbo:museum$var:museum",
+    "author" : {
+      "uri"  : "$dbo:author$anchor$var:author",
+      "name" : "$rdfs:label$lang$required",
+      "worksCount" : "$dbo:author$reverse$count"
+    }
+  },
+  "$where"    : "?work a dbo:Work",
+  "$filter"   : "?author != dbr:Raphael",
+  "$orderby"  : "desc(?title)",
+  "$lang"     : "en;q=1, it;q=0.7 *;q=0.1",
+  "$limit"    : 100,
+  "$values"   : { "museum": "dbr:Louvre" },
+  "$prefixes" : {
+       "dbr" : "http://dbpedia.org/resource/",
+       "dbo" : "http://dbpedia.org/ontology/"
+  },
+  "$langTag"  : "hide"
+}

@@ -1,0 +1,14 @@
+{
+  "proto": {
+    "state": "?state$anchor",
+    "name": "$rdfs:label$required$lang:en",
+    "cities": {
+        "id": "$dbo:country$reverse$var:city$required",
+        "name": "$rdfs:label$required$lang:en",
+        "population": "$dbo:populationTotal$required" }
+  },
+  "$where": [  "?state dbo:currency dbr:Euro",
+      "?city a  dbo:City" ] ,
+  "$langTag": "hide",
+  "$limit" : 100
+}

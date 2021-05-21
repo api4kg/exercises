@@ -1,0 +1,13 @@
+# Querying list of alternative bands and albums from DBpedia
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?band ?album WHERE {
+  ?band rdf:type dbo:Band .
+  ?album rdf:type schema:MusicAlbum .
+  ?band dbo:genre
+            <http://dbpedia.org/resource/Alternative_rock> .
+  ?album dbo:artist ?band .
+} LIMIT 100

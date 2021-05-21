@@ -1,0 +1,13 @@
+{
+  "proto": {
+    "state": "?state$anchor",
+    "name": "$rdfs:label$required$lang:en",
+    "cities":  "$dbo:country$reverse$var:city$count"
+  },
+  "$where": [
+      "?state dbo:currency dbr:Euro",
+      "?city a dbo:City"
+] ,
+  "$orderby" : "desc(?city)",
+  "$langTag": "hide"
+}

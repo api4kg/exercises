@@ -1,0 +1,10 @@
+#+ summary: Lists all DBpedia dbo:Band
+#+ endpoint: http://dbpedia.org/sparql
+#+ method: GET
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?s
+WHERE {
+  ?s a dbo:Band
+}

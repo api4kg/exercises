@@ -1,0 +1,13 @@
+{
+  "proto": {
+     "team" : "?team$anchor",
+     "name": "$rdfs:label$required$bestlang",
+     "players" : {
+       "id": "$dbo:team$reverse",
+       "name": "$rdfs:label$required$bestlang"
+     }
+  },
+  "$where": "?team dct:subject dbc:National_Basketball_Association_teams",
+  "$lang": "en",
+  "$langTag": "hide"
+}

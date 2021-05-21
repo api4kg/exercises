@@ -1,0 +1,15 @@
+SELECT DISTINCT ?band ?album ?v1 ?v2 ?v3
+WHERE {
+
+?band rdfs:label ?v1 .
+
+
+?band dbo:genre ?v2 .
+?v2 rdfs:label ?v3 .
+
+
+?band a dbo:Band .
+?album a schema:MusicAlbum .
+?album dbo:artist ?band.
+}
+LIMIT 100
