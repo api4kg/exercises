@@ -1,7 +1,9 @@
 # Chapter 4 - grlc: API automation by query sharing
 
+- [Examples]('#Examples')
+- [Exercises]('#Exercises')
 
-### Examples
+## Examples
 
 1. Querying list of band, album and genre from DBpedia - [SPARQL](./example1.rq)
 
@@ -65,7 +67,7 @@ SELECT ?band ?album WHERE {
 ```
 
 
-### Exercises
+## Exercises
 1. Create an API that retrieves all bands from DBpedia. Solution: [SPARQL](./exercise1.rq)
 
 ```sparql

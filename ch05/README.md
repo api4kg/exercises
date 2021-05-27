@@ -1,6 +1,9 @@
 # Chapter 5 - Shaping JSON results: SPARQL Transformer
 
-### Examples
+- [Examples]('#Examples')
+- [Exercises]('#Exercises')
+
+## Examples
 
 1.  An example of JSON Query, in which it is possible to distinguish the prototype definition and the $-modifiers. - [JSON](./example1.json)
 
@@ -136,7 +139,7 @@ select ?p ?o where {
 } LIMIT 5
 ```
 
-### Exercises
+## Exercises
 
 For solving the exercises, it is possible to use the [SPARQL Transformer Playground](https://d2klab.github.io/sparql-transformer/)), a web application for writing and testing JSON queries.
 
@@ -225,7 +228,7 @@ retrieve the id, the name, and the total number of cities in the country. Order 
 Use the JSON-LD syntax.
 Make sure that your query is easily extensible to other countries and languages, for example France and French or United States and English. Solution:
 [JSON](./exercise5.json)
-  - **_Tip_**: you may start by looking at [Piedmont](http://dbpedia.org/resource/Piedmont) in DBpedia. 
+  - **_Tip_**: you may start by looking at [Piedmont](http://dbpedia.org/resource/Piedmont) in DBpedia.
 
 ```json
 {
