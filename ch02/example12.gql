@@ -1,0 +1,11 @@
+{
+  Band_GET(limit: 1) {
+    _id
+    _type
+    label
+    genre {
+      _id
+      label(lang: "en")
+    }
+  }
+}

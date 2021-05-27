@@ -1,0 +1,13 @@
+type __Context {
+    Band:  _@href(iri: "http://dbpedia.org/ontology/Band")
+    Genre: _@href(iri: "http://dbpedia.org/ontology/Genre")
+    label: _@href(iri: "http://www.w3.org/2000/01/rdf-schema#label")
+    genre: _@href(iri: "http://dbpedia.org/ontology/genre")
+}
+type Band @service(id:"dbpedia-sparql") {
+    label: [String] @service(id:"dbpedia-sparql")
+    genre: Genre @service(id:"dbpedia-sparql")
+}
+type Genre @service(id:"dbpedia-sparql") {
+    label: [String] @service(id:"dbpedia-sparql")
+}

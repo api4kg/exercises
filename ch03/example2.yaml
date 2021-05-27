@@ -1,0 +1,33 @@
+paths:
+  /bands/{band_id}:
+    description: Returns a band by its id, and optionally its location details
+    parameters:
+    - name: band_id
+      in: path
+      required: true
+      description: the band identifier
+      schema:
+        type: integer
+    - name: includeLocation
+      in: query
+      description: whether to return the band's location
+      required: false
+      schema:
+        type: boolean
+    get:
+      responses:
+        '200':
+          description: the band being returned
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id: # the unique band id
+                    type: integer
+                  name: # the band's name
+                    type: string
+                    format: binary
+                  location: # the band's location
+                    type: string
+                    format: binary

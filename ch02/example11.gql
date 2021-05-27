@@ -1,0 +1,7 @@
+{
+  label @single
+  album {
+    label
+  }
+  genre(label_en: "Hard rock")  @single
+}

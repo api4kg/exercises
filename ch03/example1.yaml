@@ -1,0 +1,10 @@
+openapi: 3.0.0
+info:
+  title: Music Bands API
+  description: Provides information about music bands. This description supports [CommonMark](http://commonmark.org/) or HTML syntax.
+  version: 1.2.1
+servers:
+  - url: http://api.rockbands.io/v1
+    description: Main (production) server  # This description is optional
+  - url: http://staging-api.rockbands.io
+    description: Internal staging server for testing # This description is optional
