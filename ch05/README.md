@@ -1,7 +1,7 @@
 # Chapter 5 - Shaping JSON results: SPARQL Transformer
 
-- [Examples]('#Examples')
-- [Exercises]('#Exercises')
+- [Examples](#Examples)
+- [Exercises](#Exercises)
 
 ## Examples
 

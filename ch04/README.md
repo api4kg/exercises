@@ -1,7 +1,7 @@
 # Chapter 4 - grlc: API automation by query sharing
 
-- [Examples]('#Examples')
-- [Exercises]('#Exercises')
+- [Examples](#Examples)
+- [Exercises](#Exercises)
 
 ## Examples
 

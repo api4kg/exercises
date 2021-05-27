@@ -4,6 +4,8 @@ Examples and exercises for the book "​Web Data APIs for Knowledge Graphs" by A
 
 ## Table of contents
 
+- #### [Chapter 1](./ch01) - Introduction
+  - 1 example
 - #### [Chapter 4](./ch04) - grlc: API automation by query sharing
   - 4 examples, 4 exercises
 - #### [Chapter 5](./ch05) - Shaping JSON results: SPARQL Transformer

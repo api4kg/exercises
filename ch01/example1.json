@@ -1,0 +1,16 @@
+{
+  "@context": "http://dbpedia.org/ontology/",
+  "@graph": {
+    "@id": "http://dbpedia.org/resource/AC/DC",
+    "@type": "http://dbpedia.org/ontology/Band",
+    "genre": [
+      "http://dbpedia.org/resource/Hard_rock",
+      "http://dbpedia.org/resource/Blues_rock"
+    ],
+    "activeYearsStartYear": {
+      "@value": "1973",
+      "@type":
+        "http://www.w3.org/2001/XMLSchema#gYear"
+    }
+  }
+}
