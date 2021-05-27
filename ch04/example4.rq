@@ -1,4 +1,5 @@
-# Querying list of bands and albums from DBpedia from a specified genre 
+# Querying list of bands and albums from DBpedia from a specified genre
+
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX schema: <http://schema.org/>
