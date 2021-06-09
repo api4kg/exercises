@@ -2,12 +2,13 @@
   "proto": {
     "state": "?state$anchor",
     "name": "$rdfs:label$required$lang:en",
-    "cities":  "$dbo:country$reverse$var:city$count"
+    "cities": {
+        "id": "$dbo:country$reverse$var:city$required",
+        "name": "$rdfs:label$required$lang:en",
+        "population": "$dbo:populationTotal$required" }
   },
-  "$where": [
-      "?state dbo:currency dbr:Euro",
-      "?city a dbo:City"
-] ,
-  "$orderby" : "desc(?city)",
-  "$langTag": "hide"
+  "$where": [  "?state dbo:currency dbr:Euro",
+      "?city a  dbo:City" ] ,
+  "$langTag": "hide",
+  "$limit" : 100
 }

@@ -1,0 +1,8 @@
+SELECT DISTINCT *
+WHERE {
+    ?id a dbo:Band.
+    ?id rdfs:label ?band_label.
+    ?id dbo:genre ?genre .
+    ?genre rdfs:label ?genre_label
+}
+LIMIT 100

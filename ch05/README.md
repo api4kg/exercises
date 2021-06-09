@@ -143,7 +143,37 @@ select ?p ?o where {
 
 For solving the exercises, it is possible to use the [SPARQL Transformer Playground](https://d2klab.github.io/sparql-transformer/)), a web application for writing and testing JSON queries.
 
-1. For each NBA player, retrieve his URI identifer, name, a single image (if available) and his birth date (if available). Solution: [JSON](./exercise1.json)
+1. Write a JSON query equivalent to the following [SPARQL query](./exercise1.sparql).
+
+```sparql
+SELECT DISTINCT *
+WHERE {
+    ?id a dbo:Band.
+    ?id rdfs:label ?band_label.
+    ?id dbo:genre ?genre .
+    ?genre rdfs:label ?genre_label
+}
+LIMIT 100
+```
+
+Solution: [JSON](./exercise1.json)
+```json
+{
+  "proto": {
+    "id": "?id",
+    "label": "$rdfs:label$required",
+    "genre": {
+         "id": "$dbo:genre$required",
+        "label": "$rdfs:label$required"
+    }
+  },
+  "$where": "?id a dbo:Band",
+  "$limit": 100
+}
+```
+
+
+2. For each NBA player, retrieve his URI identifer, name, a single image (if available) and his birth date (if available). Solution: [JSON](./exercise2.json)
  - **_Tip_**: you may want to start by looking at [LeBron James](http://dbpedia.org/resource/LeBron_James) in DBpedia.
 
 ```json
@@ -161,10 +191,10 @@ For solving the exercises, it is possible to use the [SPARQL Transformer Playgro
 }
 ```
 
-2. For each team in NBA (`?team dct:subject dbc:National_Basketball_Association_teams`),
+3. For each team in NBA (`?team dct:subject dbc:National_Basketball_Association_teams`),
 retrieve the name of the team and the
 the id and name for all players of the team.
-For any name, be sure to pick the best label for an English-speaking public. Improve results readability by hiding the language tag. Solution: [JSON](./exercise2.json)
+For any name, be sure to pick the best label for an English-speaking public. Improve results readability by hiding the language tag. Solution: [JSON](./exercise3.json)
 
 ```json
 {
@@ -182,9 +212,9 @@ For any name, be sure to pick the best label for an English-speaking public. Imp
 }
 ```
 
-3. For each country using the Euro as currency (`?country dbo:currency dbr:Euro`),
+4. For each country using the Euro as currency (`?country dbo:currency dbr:Euro`),
 retrieve the id, the name, and the list of cities, together with city name and city population. Make sure to pick exactly the English labels and to hide the language tag. Limit the results to the first 100.  Solution:
-[JSON](./exercise3.json)
+[JSON](./exercise4.json)
  - **_Tip_**: you may start by looking at [Athens](http://dbpedia.org/resource/Athens) in DBpedia.
 
 ```json
@@ -204,9 +234,9 @@ retrieve the id, the name, and the list of cities, together with city name and c
 }
 ```
 
-4. For each country using the Euro as currency,
+5. For each country using the Euro as currency,
 retrieve the id, the name, and the total number of cities in the country. Order by descending number of cities. Make sure to pick exactly the English labels and to hide the language tag. Solution:
-[JSON](./exercise4.json)
+[JSON](./exercise5.json)
 
 ```json
 {
@@ -224,10 +254,10 @@ retrieve the id, the name, and the total number of cities in the country. Order 
 }
 ```
 
-5. Retrieve the list of Italian regions, with names and the list of cities in the region (id + label). Limit to the first 100 results and pick labels in Italian, hiding the language tag.
+6. Retrieve the list of Italian regions, with names and the list of cities in the region (id + label). Limit to the first 100 results and pick labels in Italian, hiding the language tag.
 Use the JSON-LD syntax.
 Make sure that your query is easily extensible to other countries and languages, for example France and French or United States and English. Solution:
-[JSON](./exercise5.json)
+[JSON](./exercise6.json)
   - **_Tip_**: you may start by looking at [Piedmont](http://dbpedia.org/resource/Piedmont) in DBpedia.
 
 ```json

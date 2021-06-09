@@ -1,0 +1,23 @@
+{
+  "@context": "http://example.org/",
+  "@graph": [{
+    "@type": "AdministrativeArea",
+    "@id": "?id",
+    "name": "$rdfs:label$required$lang",
+    "country": "$dbo:country$required$var:country",
+    "city": {
+      "@id" : "$dbo:region$required$reverse$var:city",
+      "name": "$rdfs:label$required$lang"
+    }
+  }],
+  "$where": [
+    "?id a dbo:AdministrativeRegion",
+    "?city a dbo:City"
+  ],
+  "$values" : {
+    "country" : "dbr:Italy"
+  },
+  "$lang": "it",
+  "$langTag": "hide",
+  "$limit": 100
+}

@@ -102,7 +102,7 @@ def band(band_id):
             VALUES ?item (___id___)
             SERVICE wikibase:label { bd:serviceParam
                     wikibase:language "[AUTO_LANGUAGE],en" }
-        }"""
+        } """
     query_string.replace("___id___", id)
 
     # Prepare HTTP request

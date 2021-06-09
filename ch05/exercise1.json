@@ -1,12 +1,12 @@
 {
   "proto": {
     "id": "?id",
-    "name": "$rdfs:label$required",
-    "league": "$dbo:league$var:league",
-    "image": "$foaf:depiction$sample",
-    "birthDate": "$dbo:birthDate"
+    "label": "$rdfs:label$required",
+    "genre": {
+         "id": "$dbo:genre$required",
+        "label": "$rdfs:label$required"
+    }
   },
-  "$values": {
-    "league": "dbr:National_Basketball_Association"
-  }
+  "$where": "?id a dbo:Band",
+  "$limit": 100
 }

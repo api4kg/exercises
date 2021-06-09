@@ -1,13 +1,12 @@
 {
   "proto": {
-     "team" : "?team$anchor",
-     "name": "$rdfs:label$required$bestlang",
-     "players" : {
-       "id": "$dbo:team$reverse",
-       "name": "$rdfs:label$required$bestlang"
-     }
+    "id": "?id",
+    "name": "$rdfs:label$required",
+    "league": "$dbo:league$var:league",
+    "image": "$foaf:depiction$sample",
+    "birthDate": "$dbo:birthDate"
   },
-  "$where": "?team dct:subject dbc:National_Basketball_Association_teams",
-  "$lang": "en",
-  "$langTag": "hide"
+  "$values": {
+    "league": "dbr:National_Basketball_Association"
+  }
 }
