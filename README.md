@@ -5,7 +5,7 @@ Examples and exercises for the book "​Web Data APIs for Knowledge Graphs" by A
 ## Table of contents
 
 - #### [Chapter 1](./ch01) - Introduction
-  - 1 example
+  - 6 examples
 - #### [Chapter 2](./ch02) - Accessing Knowledge Graphs programmatically
   - 12 examples
 - #### [Chapter 3](./ch03) - Web data APIs over SPARQL

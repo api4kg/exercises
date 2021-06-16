@@ -1,0 +1,7 @@
+{
+  band: {
+      name
+      genre
+      founded_in
+  }
+}

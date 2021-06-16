@@ -1,0 +1,7 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix dbo: <http://dbpedia.org/ontology/Band> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dbr:AC/DC a dbo:Band ;
+          dbo:genre dbr:Hard_rock, dbr:Blues_rock ;
+          dbo:activeYearsStartYear "1973"^^xsd:gYear .

@@ -1,0 +1,4 @@
+<http://dbpedia.org/resource/AC/DC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Band> .
+<http://dbpedia.org/resource/AC/DC> <http://dbpedia.org/ontology/genre> <http://dbpedia.org/resource/Hard_rock> .
+<http://dbpedia.org/resource/AC/DC> <http://dbpedia.org/ontology/genre> <http://dbpedia.org/resource/Blues_rock> .
+<http://dbpedia.org/resource/AC/DC> <http://dbpedia.org/ontology/activeYearsStartYear> "1973"^^<http://www.w3.org/2001/XMLSchema#gYear> .
